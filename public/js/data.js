@@ -35,11 +35,11 @@ var controller = new Vue({
         },
         deleteData(event,id){
             const _this = this;
-            $(event.target).parents('tr').remove();
             if(confirm("Are you sure?")) {
+                $(event.target).parents('tr').remove();
                 axios.post(this.actionUrl+'/'+id, {_method: 'DELETE'}).then(response => {
                     _this.table.ajax.reload();
-                    // alert('Data has been removed');
+                    alert('Data has been removed');
                 });
             }
         },

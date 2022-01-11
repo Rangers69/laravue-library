@@ -36,7 +36,7 @@
             <div class="modal-content">
                 <form method="post" :action="actionUrl" autocomplete="off" @submit="submitForm($event, book.id)">
                     <div class="modal-header">
-                        <h4 class="modal-title">Publisher</h4>
+                        <h4 class="modal-title">Book</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
