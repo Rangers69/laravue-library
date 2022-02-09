@@ -24,13 +24,5 @@ class Transaction extends Model
         return $this->hasMany(TransactionDetail::class);
     }
 
-    // public function transactionDetail()
-    // {
-    //     return $this->hasMany('App\Models\TransactionDetail','id');
-    // }
-
-    // public function member()
-    // {
-    //     return $this->belongsTo('App\Models\Member', 'member_id');
-    // }
+  
 }

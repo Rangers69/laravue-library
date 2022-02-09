@@ -92,7 +92,8 @@ class TransactionController extends Controller
                                         ->total_bayar;
         }
 
-        $datatables = datatables()->of($transactions)->addColumn('status', function($transaction){
+        $datatables = datatables()->of($transactions)
+        ->addColumn('status', function($transaction){
             if($transaction->status == 1){
                 return 'Selesai';
             } else {

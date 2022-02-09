@@ -202,7 +202,7 @@ class HomeController extends Controller
         // return $data_pie;
        
 
-        $label_bar = ['Transactions',];
+        $label_bar = ['Transactions'];
         $data_bar = [];
 
         foreach ($label_bar as $key => $value) {
