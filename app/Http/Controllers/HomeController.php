@@ -193,8 +193,8 @@ class HomeController extends Controller
         $all_transactions = Transaction::whereMonth('date_start', date('m'))->count();
         $all_publishers = Publisher::count();
 
-        $label_donut = Publisher::orderBy('publisher_id')->join('books', 'books.publisher_id', 'publishers.id')->groupBy('publishers.name')->pluck('publishers.name');
-        $data_donut = Book::select(DB::raw("COUNT(publisher_id) as total"))->groupBy('publisher_id')->orderBy('publisher_id')->pluck('total');
+        $label_donut = Publisher::orderBy('publisher_id')->join('books', 'books.publisher_id', 'publishers.id')->groupBy('publishers.name')->limit(5)->pluck('publishers.name');
+        $data_donut = Book::select(DB::raw("COUNT(publisher_id) as total"))->groupBy('publisher_id')->orderBy('publisher_id')->limit(5)->pluck('total');
 
         $label_pie = Catalog::orderBy('catalog_id')->join('books', 'books.catalog_id', 'catalogs.id')->groupBy('catalogs.name')->pluck('catalogs.name');
         $data_pie = Book::select(DB::raw("COUNT(catalog_id) as total"))->groupBy('catalog_id')->orderBy('catalog_id')->pluck('total');

@@ -57,8 +57,8 @@ class TransactionController extends Controller
         // $user->assignRole('suadmin');
         // return $user;
 
-        $user = User::with('roles')->get();
-        return $user;
+        // $user = User::with('roles')->get();
+        // return $user;
 
         // $user = User::where('id', 2)->first();
         // $user->removeRole('suadmin');

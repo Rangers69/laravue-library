@@ -79,7 +79,6 @@ class CatalogController extends Controller
      */
     public function edit(Catalog $catalog)
     {
-        // return $catalog;
         return view('admin.catalog.edit',compact('catalog'));
     }
 

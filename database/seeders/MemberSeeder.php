@@ -17,7 +17,7 @@ class MemberSeeder extends Seeder
     {
         $faker = Faker::create();
 
-        for ($i=0; $i < 17; $i++)
+        for ($i=0; $i < 10; $i++)
         {
             $member = new Member;
 
